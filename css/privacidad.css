@@ -1,0 +1,95 @@
+body {
+    background-color: #E1E6EE;
+    margin: 0px auto;
+}
+p {
+    font-family: "Quicksand", sans-serif;
+    font-size: 12;
+
+}
+h2 {
+    font-family: "Raleway", sans-serif;
+    font-size: 16;
+    flex: 1 1 0;
+}
+
+h3{
+    font-family: "Raleway", sans-serif;
+    font-size: 14;
+    flex: 1 1 0;
+}
+
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px auto;
+    max-width: 100%;
+}
+
+.privacidad{
+    text-align: center;
+    flex: 1 1 40%;
+    padding: 1rem;
+    order: 0;
+}
+.recop-datos{
+    flex: 1 1 40%;
+    padding: 1rem;
+    order: 1;
+    text-align: center;
+}
+.utiliz-info{
+    flex: 1 1 40%;
+    padding: 1rem;
+    order: 2;
+    text-align: center;
+}
+.proteccion-info{
+    flex: 1 1 40%;
+    padding: 1rem;
+    order: 3;
+    text-align: center;
+}
+.derechos{
+    flex: 1 1 40%;
+    padding: 1rem;
+    order: 4;
+    text-align: center;
+}
+.cambios-politica{
+    flex: 1 1 40%;
+    padding: 1rem;
+    order: 5;
+    text-align: center;
+}
+footer{
+    flex: 1 1 0;
+
+    order: 6;
+
+}
+.flecha-subir {
+    text-align: center;
+}
+.flecha-subir img {
+    transform: rotate(-90deg);
+}
+footer{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-top: 2px solid black;
+    flex: 1 1 100%;
+    background-color: #BEC7D8;
+    width: 100%;
+    margin: 0px auto;
+}
+footer a{
+    text-decoration: none;
+    color: black;
+}
+@media (max-width: 768px){
+    .contenedor{
+     flex-direction: column;
+    }
+}

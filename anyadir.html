@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Carrito de Compra</title>
+  <link rel="stylesheet" href="css/cabecera.css">
+  <link rel="stylesheet" href="css/body.css">
+  <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="css/anyadir.css">
+  <link rel="stylesheet" href="css/footer.css">
+  
+
+</head>
+<body>
+<!--Aquí empieza la cabecera-->
+<header id="cabecera-web" role="banner">
+  <!--logo-->
+  <a href="index.html">
+    <img src="img/logo-gti.png" alt="logo GTI" id="logo-GTI">
+  </a>
+  <h1>Cuidamos tus plantas</h1>
+  <a href="usuarios/perfil.html">
+    <img src="img/icono-cuenta1.png" alt="tu cuenta" id="mi-cuenta">
+  </a>
+</header>
+<!--Aquí termina la cabecera-->
+<nav id="menu">
+  <!--<a href="#">Logo</a>-->
+  <ul>
+    <li data-item="1"><a href="#" class="">Monitorizar</a></li>
+    <li data-item="3"><a href="#" class="">Consulta</a></li>
+    <li data-item="4"><a href="#"class="">Reciclar</a></li>
+  </ul>
+</nav>
+<!--Aquí empieza pedir más-->
+<h1 id="titulo">Carrito de Compra</h1>
+<div class="container">
+  <!--Aquí empieza imágenes/textos pedir mas -->
+  <div class="imagen-info">
+
+    <img class="product-image" src="img/kitgti.png" alt="Producto">
+
+  </div>
+  <!--Aquí termina imágenes/textos pedir mas -->
+  <div class="product-info">
+    <h3 class="product-name">Kit GTI</h3>
+    <p class="product-description">Equipo de Monitorización</p>
+  </div>
+  <!--Aquí empieza el selector pedir mas -->
+  <div class="counter">
+    <button id="menos" type="button">-</button>
+
+    <input type="text" id="contador" class="form-control" value="1" min="1" />
+
+    <button id="mas" type="button">+</button>
+  </div>
+  <!--Aquí termina el selector pedir mas -->
+</div>
+<!--Aquí termina pedir más-->
+
+<!--Aquí empieza el botón pedir-->
+<div>
+  <hr>
+  <form id="boton-pedir">
+    <input type="submit" id="Pedir" value="Pedir">
+  </form>
+</div>
+<!--Aquí termina el botón pedir-->
+
+
+<!--Aquí empieza el pie de pagina-->
+<footer class="pie-pagina" id="pie">
+
+  <a href="../anyadir.html">
+    <img src="img/icono-mas.png">
+  </a>
+
+  <a href="Preguntas-frecuentes.html">
+    <img src="img/faq.png">
+  </a>
+</footer>
+<!--Aquí termina el pie de pagina-->
+<!--Aqui se linkea al javascript-->
+<script src="js/anyadir.js"></script>
+</body>
+</html>
