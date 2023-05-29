@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <title>Perfil</title>
+  <meta charset="UTF-8">
+  <title>Carrito de Compra</title>
 
   <!-- link para Bootstrap -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
@@ -13,13 +12,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <link rel="stylesheet" href="../css/cabecera.css">
-  <!-- <link rel="stylesheet" href="../css/body.css"> -->
-  <link rel="stylesheet" href="../css/menu.css">
-  <link rel="stylesheet" href="../css/perfil.css">
-  <link rel="stylesheet" href="../css/footer.css">
+<!--   <link rel="stylesheet" href="css/body.css">
+  <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="css/anyadir.css">
+  <link rel="stylesheet" href="css/footer.css"> -->
+  
 
 </head>
-
 <body>
   <!--Aquí comienza el encabezado-->
   <header>
@@ -46,8 +45,8 @@
           <li class="nav-item">
             <a class="nav-link" href="monitorizar.html">Mis Huertos</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="anyadir.html">Solicitar Mas</a>
+          <li class="nav-item active">
+            <a class="nav-link" href="anyadir.html">Solicitar Mas <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="consulta.html">Consultas</a>
@@ -67,7 +66,7 @@
         <!-- Menu dropown -->
         <div class="dropdown-menu">
           <!-- links -->
-          <a class="dropdown-item" href="#">Mi Perfil</a>
+          <a class="dropdown-item" href="perfil.html">Mi Perfil</a>
           <a class="dropdown-item" href="index.html">Cerrar Sesión</a>
         </div>
       </div> 
@@ -75,48 +74,58 @@
   </header>
   <!--Aquí termina el encabezado-->
 
-    <section id="perfil">
-        <h1>Perfil</h1>
-        <div id="datos">
-            <div id="usuario">
-            <label>Nombre de usuario</label>
-            <label>ruby</label>
-            </div>
-            <div id="nombre">
-            <label>Nombre</label>
-            <label>Ruben</label>
-            </div>
-            <div id="apellidos">
-            <label>Apellidos</label>
-            <label>Garcia Quiralte</label>
-            </div>
-            <div id="correo">
-            <label>Correo elctronico</label>
-            <label>ruby@gmail.com</label>
-            </div>
-            <div id="sensores">
-            <label>Numero de sensores</label>
-            <label>1</label>
-            </div>
-        </div>
-        <a href="iniciar.html">
-            <input type="submit" value="Cerrar sesion" id="cerrar-sesion">
-        </a>
-        
-    </section>
-    <footer class="pie-pagina" id="pie">
+<!--Aquí empieza pedir más-->
+<h1 id="titulo">Carrito de Compra</h1>
+<div class="container">
+  <!--Aquí empieza imágenes/textos pedir mas -->
+  <div class="imagen-info">
 
-      <a href="../anyadir.html">
-        <img src="../img/icono-mas.png">
-      </a>
+    <img class="product-image" src="../img/kitgti.png" alt="Producto">
 
-      <a href="Preguntas-frecuentes.html">
-        <img src="../img/faq.png">
-      </a>
-    </footer>
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+  </div>
+  <!--Aquí termina imágenes/textos pedir mas -->
+  <div class="product-info">
+    <h3 class="product-name">Kit GTI</h3>
+    <p class="product-description">Equipo de Monitorización</p>
+  </div>
+  <!--Aquí empieza el selector pedir mas -->
+  <div class="counter">
+    <button id="menos" type="button">-</button>
+
+    <input type="text" id="contador" class="form-control" value="1" min="1" />
+
+    <button id="mas" type="button">+</button>
+  </div>
+  <!--Aquí termina el selector pedir mas -->
+</div>
+<!--Aquí termina pedir más-->
+
+<!--Aquí empieza el botón pedir-->
+<div>
+  <hr>
+  <form id="boton-pedir">
+    <input type="submit" id="Pedir" value="Pedir">
+  </form>
+</div>
+<!--Aquí termina el botón pedir-->
+
+
+<!--Aquí empieza el pie de pagina-->
+<footer class="pie-pagina" id="pie">
+
+  <a href="../anyadir.html">
+    <img src="img/icono-mas.png">
+  </a>
+
+  <a href="Preguntas-frecuentes.html">
+    <img src="img/faq.png">
+  </a>
+</footer>
+<!--Aquí termina el pie de pagina-->
+<!--Aqui se linkea al javascript-->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+<script src="js/anyadir.js"></script>
 </body>
-
 </html>
