@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Poli[Huerto]</title>
+    <link rel="stylesheet" href="../css/cabecera.css">
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/body.css">
+    <link rel="stylesheet" href="../css/consulta.css">
+</head>
+<body>
+    <!--Aquí comienza el encabezado-->
+    <header id="cabecera-web" role="banner">
+        <!--logo gti-->
+        <a href="../index.html">
+        <img src="../img/logo-gti.png" alt="logo GTI" id="logo-GTI">
+        </a>
+        <h1>Cuidamos tus plantas</h1>
+        <!--logo-mi-cuenta-->
+        <a href="perfil.html">
+        <img src="../img/icono-cuenta1.png" alt="tu cuenta" id="mi-cuenta">
+        </a>
+    
+    </header>
+  <!--Aquí termina el encabezado-->
+  <!--Aquí comienza el menú de la interfaz-->
+  <nav id="menu">
+    <ul>
+      <li data-item="1" class=""><a href="monitorizar.html" >Monitorizar</a></li>
+      <li data-item="3" class="activa"><a href="#" >Consulta</a></li>
+      <li data-item="4" class=""><a href="../usuarios/reciclaje.html" >Reciclar</a></li>
+    </ul>
+  </nav>
+  <!--Aquí termina el menú de la interfaz-->
+  <!--Aquí comienza la sección de consulta-->
+    <section class="final consulta" id="item3">
+        <div>
+            <form class="form">
+                <div>
+                    <!--<input type="text" id="descripcion" placeholder="Por favor, comunique su problema con nosotros" required> -->        
+                    <textarea id="descripcion" name="descripcion" placeholder="Por favor, comunique su problema con nosotros"></textarea>
+                </div>
+                <div>
+                    <input type="submit" id="Reporte" value="Enviar">
+                </div>
+            </form>
+        </div>
+    </section>
+  <!--Aquí termina la sección de consulta-->
+  <!-- <footer class="pie-pagina" id="pie">
+    
+    <a href="../añadir.html">
+      <img src="/img/icono-mas.png">
+    </a>
+  </footer> -->
+  <script>
+    document.querySelector("#menu").addEventListener(
+            "click",
+            (event) => {
+              let value = event.target.parentNode.dataset.item; // Se cambia el selector a parentNode.dataset.item para seleccionar el valor del atributo data-item del elemento li
+              let tt = "item" + value;
+              let items = document.querySelectorAll("section[id^='item']");
+              items.forEach(
+                      (item)=>{
+                        if(item.id === tt){
+                          item.classList.add("activo");
+                        }else{
+                          item.classList.remove("activo");
+                        }
+                      }
+              )
+              let links = document.querySelectorAll("#menu a");
+              links.forEach((link) => {
+                if (link.parentNode.dataset.item === value) {
+                  link.classList.add("activa");
+                } else {
+                  link.classList.remove("activa");
+                }
+              });
+            }
+    );
+  </script>
+   <!-- <footer class="pie-pagina" id="pie">
+    
+    <a href="../añadir.html">
+      <img src="/img/icono-mas.png">
+    </a>
+  </footer> -->
+</body>
+</html>

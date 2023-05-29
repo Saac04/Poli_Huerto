@@ -1,0 +1,152 @@
+/* EL BODY TIENE UN PADDING-TOP PARA SEPARAR LA PAGINA DE LA CABECERA YA QUE ESTA ES FIXED-TOP */
+/* SIN EL PADDING LA PAGINA SE SOBREPONE A LA CABECERA */
+body{
+    padding-top: 98px;
+}
+
+/* HEADER */
+header nav{
+    margin: 0px auto;
+    /* LINEA DE SEPARACION COMO UN HEADER (DISEÑO DE LA PAGINA COMO EN EL MOCKUP) */
+    width: 90%;
+    border-bottom: 2px solid black;
+}
+
+/* NAVBAR DE BOOTSTRAP 4 */
+.navbar{
+    background-color: white;
+}
+
+/* LOGO DE LA EMPRESA */
+a img{
+    height: 65px;
+}
+
+/* SE ELIMINAN LOS PADDINGS ORIGINALES DEL BOTON DEL MENU HAMBURGUESA QUE DA BOOTSTRAP 4 */
+.navbar-toggler{
+    border: 0;
+    padding: 0;
+}
+
+/* SE CAMBIA EL NAVBAR-COLLAPSE DE BOOTSTRAP 4 PARA QUE EL MENU SE ENCUENTRE EN LA DERCHA CUANDO LA PAGINA ESTE EN MODO PC */
+.navbar-collapse{
+    justify-content: end;
+    padding-right: 20px;
+}
+
+/* CENTRAR EL MENU CUANDO SE EXTIENDE */
+.nav-item {
+    text-align: center;
+}
+
+/* CAMBIAR COLOR CUANDO UN LINK ESTE ACTIVO */
+#navbarSupportedContent1 .navbar-nav li.active > a {
+    color: #00CFA4;
+}
+
+/* CAMBIOS EN EL BOTON DEL AVATAR DEL USUARIO DE BOOTSTRAP 4 */
+.btn{
+    padding-top: 5px;
+    padding-bottom: 0;
+}
+.btn:hover {
+    color: #00CFA4;
+    background-color: white;
+    border: none;
+}
+.btn.focus, .btn:focus {
+    outline: 0;
+    box-shadow: none; 
+}
+
+/* SEPARAR EL NOMBRE DEL AVATAR DEL USUARIO */
+.nombre-usuario{
+    padding: 5px;
+}
+
+/* CAMBIAR TAMAÑO DE LA IMAGEN DEL AVATAR */
+.rounded-circle {
+    height: 50px;
+}
+
+/* CLASE ACTIVO, CUANDO EL BORDE DEL HEADER BAJE PORQUE SE ABRE EL MENU QUE CAMBIE DE COLOR */
+.activo{
+    border-bottom: 2px solid #00CFA4;
+}
+
+/* ============================================== */
+/* MEDIAS */
+/* ============================================== */
+
+@media(max-width: 767px) {
+    /* APROVECHAR MEJOR EL ESPACIO QUITANDO LOS PADDINGS */
+    .navbar{
+        justify-content: end;
+        padding: 8px 0 0 0;
+    }
+
+    /* CAMNIAR EL ORDEN DEL BOTON DE LA HAMBURGUESA Y EL BOTON DEL USUARIO */
+    .boton-menu{
+        order: 1;
+    }
+    .menu-cabecera-registrado{
+        order: 2;
+    }
+}
+
+@media(max-width: 650px) {
+    .btn {
+        padding: 0;
+    }
+}
+/* ============================================== */
+/* ============================================== */
+
+
+
+/* ============================================== */
+/* ANIMACION MENU HAMBURGUESA -- AUTOR: Mikael Ainalem
+/* ============================================== */
+.ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /* CAMBIO DE TAMAÑO */
+    height: 70px;
+    width: 70px;
+}
+  .hamRotate.active {
+    transform: rotate(45deg);
+}
+
+.line {
+    fill:none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke:#00CFA4;
+    stroke-width:5.5;
+    stroke-linecap:round;
+}
+
+.ham4 .top {
+    stroke-dasharray: 40 121;
+}
+.ham4 .bottom {
+    stroke-dasharray: 40 121;
+}
+.ham4.active .top {
+    stroke-dashoffset: -68px;
+    stroke:red;
+}
+.ham.active .middle {
+    stroke:red;
+}
+.ham4.active .bottom {
+    stroke-dashoffset: -68px;
+    stroke:red;
+}
+/* ============================================== */
+/* ============================================== */

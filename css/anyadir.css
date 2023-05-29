@@ -1,0 +1,89 @@
+/*Aqui comienza el contenedor principal */
+/*lo centramos en la pantalla */
+.container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  /*Aqui termina el contenedor princial */
+  /* Aqui empieza el apartaddo para alinear la foto, la información y el contador*/
+  .imagen-info, .product-info, .counter {
+    flex: 1;
+    text-align: center;
+  }
+  /*Aqui termina este apartado */
+  /*Aqui comienza el aprtado para añadir estilos a los componentes del contador */
+  #mas{
+    border-radius: 100%;
+    background-color: white;
+    font-weight: bold;
+  }
+  
+  #menos{
+    border-radius: 100%;
+    background-color: white;
+    font-weight: bold;
+    
+  }
+  
+  #contador{
+    border: none;
+    text-align: center;
+    font-weight: bold;
+  }
+  /*Aqui termina este apartado */
+  /*Aqui comienza el apartado de pedir */
+  #Pedir{
+    background-color: #5ABFBF;
+    color: white;
+    width: 200px;
+    height: 50px;
+    font-size: 1.3em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 350px;
+    margin-top: 50px;
+  }
+  /*Aqui termina el apartado de pedir*/
+  /*Aui cominenzan los estilos para que sea responsive*/
+  @media screen and (max-width: 500px) {
+    
+    #titulo{
+      margin-left: 10px;
+    }
+   
+    .container {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 200px;
+    }
+  
+    .product-image{
+      width: 100px;
+      height: 100px;
+    }
+  
+  
+  
+    .counter{
+      width: 10px;
+      margin-right: 60px;
+  
+    }
+  
+    #contador{
+      width: 50px;
+    }
+  
+  
+  
+    #Pedir {
+      
+      margin: 50px auto;
+      display: flex;
+      justify-content: center;
+  
+    }
+  }
+  /*Aqui termina el aprtado responsive*/

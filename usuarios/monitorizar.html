@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <title>Poli[Huerto]</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <!-- link para Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <!-- Link para usar iconos de Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!-- link para usar Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- css  -->
+  <link rel="stylesheet" href="../css/monitorizar.css">
+  <link rel="stylesheet" href="../css/header.css">
+  
+  
+</head>
+<body>
+  <!--Aquí comienza el encabezado-->
+  <header>
+    <nav class="cabecera navbar navbar-expand-md navbar-light fixed-top" id="cabecera-web" role="banner">
+      
+      <!-- Aqui esta el logotipo de la empresa -->
+      <a class="logo navbar-brand mr-auto" href="../index.html">
+        <img src="/img/logo-gti.png" alt="logo GTI" id="logo-GTI">
+      </a>
+      
+      <!--Boton de la hamburguesa cunado la pagina se redimensione a mas angosta -->
+      <button class="navbar-toggler boton-menu" id="boton-menu" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- SVG animado de la hamburguesa -- autor: Mikael Ainalem -->
+        <svg class="ham hamRotate ham4" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
+          <path class="line top" d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20" />
+          <path class="line middle" d="m 70,50 h -40" />
+          <path class="line bottom" d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20" />
+      </button>
+      
+      <!-- Aqui va el menu colapsable -->
+      <div class="menu-cabecera-registrado collapse navbar-collapse" id="navbarSupportedContent1">
+        <!-- Links -->
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Mis Huertos <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Solicitar Mas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Consultas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Dar de Baja</a>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Boton del usuario -->
+      <div class="dropdown">
+        <button class="btn" type="button" data-toggle="dropdown" aria-expanded="false">
+          <!-- avatar del usuario -->
+          <span class="nombre-usuario">Ruby</span><img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img (31).webp" class="rounded-circle"  alt="Portrait of a Woman" loading="lazy"/>
+        </button>
+        <!-- Menu dropown -->
+        <div class="dropdown-menu">
+          <!-- links -->
+          <a class="dropdown-item" href="#">Mi Perfil</a>
+          <a class="dropdown-item" href="#">Cerrar Sesión</a>
+        </div>
+      </div> 
+    </nav>
+  </header>
+  <!--Aquí termina el encabezado-->
+
+
+  
+  
+  
+  
+  <section>
+    <!-- Aquí comienza el div de las graficas -->
+    
+    <!--Aquí comienza el selector de los huertos-->
+    <div id="lista-huertos">
+      <nav>
+        <a>Huertos ˅</a>  
+        <ul>
+          <li data-item="6"><a href="#grafica1" >Huerto 01</a></li>
+          <li data-item="7"><a href="#grafica2" >Huerto 02</a></li>
+          <li data-item="8"><a href="#grafica3" ></a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- Aqui se ven las lista-medidas tiempo real -->
+    <div id="lista-medidas">
+      <ul>
+        <li>Temperatura: </li>
+        <li>Humedad: </li>
+        <li>Luminidad: </li>
+        <li>Luz UV: </li>
+        <li>Salinidad: </li>
+        <li>pH:</li>
+      </ul>
+    </div>
+
+    <div id="graficas">
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+  <script src="../js/monitorizar.js"></script>
+</body>
+</html>

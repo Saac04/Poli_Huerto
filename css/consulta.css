@@ -1,0 +1,55 @@
+.consulta div{
+    background-color: #A8E0FD;
+    border-radius: 10px;
+    margin: 0px auto;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+}
+
+#descripcion{
+    height: 150px;
+    width : 600px;
+    border-radius: 10px;    
+    margin-bottom: 35px ;
+    font-size: 20px;
+    padding: 20px;
+}
+
+
+#Reporte {
+    background-color: #5ABFBF;
+    color: white;
+    width: 272px;
+    height: 65px;
+    font-size: 1.3em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#Reporte:hover {
+    background-color: #5ABFBF;
+    font-weight: 600;
+}
+
+#descripcion #Reporte{
+    display: flex;
+    justify-content: center;
+}
+
+@media(max-width: 830px){
+    #descripcion{
+        width: 450px;
+    }
+
+}
+@media(max-width: 600px){
+    #descripcion{
+        width: 300px;
+    }
+
+}
