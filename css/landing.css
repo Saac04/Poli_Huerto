@@ -1,0 +1,193 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0px auto;
+    background-color: #BEC7D8;
+
+}
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 0px auto;
+}
+header a{
+    font-size: 20px;
+    text-decoration: none;
+    color: #00CFA4;
+    font-weight: bold;
+}
+.Bienvenida{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background: url("../img/Nueva carpeta/fondo-landing.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 544px;
+    /*background-attachment: local;*/
+}
+.Bienvenida #flecha-bajar{
+    align-self:center;
+}
+.Bienvenida h1{
+    font-size: 250%;
+    background-color: rgba(0, 0, 0, 50%);
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+#saber-más{
+    background-color: #00CFA4;
+    border: none;
+    border-bottom-right-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-top-left-radius: 100px;
+    height: 50px;
+    width: 200px;
+    font-size: 20px;
+    font-weight: bold;
+    align-self: center;
+}
+#saber-más a{
+    text-decoration: none;
+    color: white;
+}
+.Kit-gti{
+    text-align: center;
+    font-family: monospace;
+}
+.Kit-gti #muestra-producto{
+    background: url("../img/Nueva carpeta/huerto.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 240px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#muestra-producto h2{
+    font-family: 'Raleway', sans-serif;
+    align-self: center;
+    position: absolute;
+    font-weight: 500;
+    font-size: 100%;
+    text-align: center;
+    background-color: white;
+    color: black;
+    padding: 1.5% 1.5% 1.5% 1.5%;
+    border-radius: 25px 25px 25px 25px;
+    flex: 1 1 0;
+
+}
+#muestra-producto h3{
+    font-family: 'Raleway', sans-serif;
+    position: absolute;
+    font-weight: 500;
+    font-size: 100%;
+    text-align: center;
+    background-color: #00CFA4;
+    color: white;
+    padding: 1.5% 1.5% 1.5% 1.5%;
+    align-self: center;
+    border-radius: 15px 15px 15px 15px;
+    rotate: -45deg;
+}
+.Detalles-producto{
+    /*background: white;*/
+    text-align: center;
+}
+.Detalles-producto h3{
+    font-size: 28px;
+    text-align: left;
+    background: #00CFA4;
+    width: 300px;
+    color: white;
+}
+.carrusel-imagenes{
+    /*background: white;*/
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 0;
+    flex: 1 1 100%;
+}
+.carrusel-imagenes img{
+    width: 33.33%;
+}
+
+.mapa-producto{
+    /*background: white;*/
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.mapa-producto img{
+    width: 70%;
+}
+.sensores{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    border-top: 2px solid black;
+    flex: 1 1 0;
+    background: #00CFA4;
+    background-repeat: no-repeat;
+    margin-top: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.sensores article{
+    padding: 15px;
+}
+.sensores article p{
+    color: black;
+    font-size: 22px;
+}
+.sensores img{
+ justify-self: center;
+    align-self: center;
+    width: 100px;
+    height: 100px;
+}
+footer{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-top: 2px solid black;
+    background-color: #BEC7D8;
+}
+footer a{
+    text-decoration: none;
+    color: black;
+}
+@media (max-width: 965px){
+.sensores{
+    flex-direction: column;
+    flex: 0 0 100%;
+}
+    .sensores article p{
+        font-size: 25px;
+    }
+}
+@media (max-width: 561px){
+    .Bienvenida{
+
+ text-align: center;
+    }
+}
+@media (max-width: 1604px) {
+    .carrusel-imagenes img{
+       flex: 1 0 0;
+    }
+}

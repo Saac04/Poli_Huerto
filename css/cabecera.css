@@ -1,0 +1,43 @@
+header{
+    background-color: white;
+    border-style: solid;
+    border-top: black;
+    border-right: black;
+    border-left: black;
+    display: flex;
+    margin: 0px auto;
+    flex: 1 1 0;
+    max-width: 100%;
+    min-width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+header h1{
+    font-size: 29px;
+}
+#iniciar-sesion{
+    width: 100px;
+    height: 100px;
+}
+#mi-cuenta{
+    width: 100px;
+    height: 100px;
+}
+header hr{
+    width: 100%;
+}
+#logo-GTI{
+    flex: 1 1 0;
+    width: 100px;
+}
+@media (max-width: 600px) {
+    header{
+        text-align: center;
+        font-size: 50%;
+    }
+}

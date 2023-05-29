@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Poli[Huerto]</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="../css/cabecera.css">
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/body.css">
+    <link rel="stylesheet" href="../css/monitorizar.css">
+    <script src="/../js/usuario_final_registrado.js"></script>
+
+</head>
+<body>
+    <!--Aquí comienza el encabezado-->
+    <header id="cabecera-web" role="banner">
+        <!--logo gti-->
+        <a href="../index.html">
+        <img src="../img/logo-gti.png" alt="logo GTI" id="logo-GTI">
+        </a>
+        <h1>Cuidamos tus plantas</h1>
+        <!--logo-mi-cuenta-->
+        <a href="perfil.html">
+        <img src="../img/icono-cuenta1.png" alt="tu cuenta" id="mi-cuenta">
+        </a>
+    
+    </header>
+  <!--Aquí termina el encabezado-->
+  <!--Aquí comienza el menú de la interfaz-->
+  <nav id="menu">
+    <ul>
+      <li data-item="1" class="activa"><a href="#" >Monitorizar</a></li>
+      <li data-item="3" class=""><a href="consulta.html" >Consulta</a></li>
+      <li data-item="4" class=""><a href="reciclaje.html" >Reciclar</a></li>
+    </ul>
+  </nav>
+  <!--Aquí termina el menú de la interfaz-->
+  <section class="final activo huertos" id="item1">
+    <!-- Aquí comienza el div de las graficas -->
+    <div>
+      <nav id="menu-huertos">
+        <!--<a href="#">Logo</a>-->
+        <a>Huertos ˅</a>  
+        <ul>
+          <li data-item="6"><a href="#grafica1" class="activa">Kit GTI 01</a></li>
+          <li data-item="7"><a href="#grafica2" class="">Kit GTI 02</a></li>
+          <li data-item="8"><a href="#grafica3" class="">Plantas de Lucia</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="graficas">
+      <!--Aquí comienza la gráfica 1-->
+      <article id="grafica1" class="grafica">
+        <canvas id="plot1"></canvas>
+        <script>
+          var ctx1 = document.getElementById('plot1').getContext('2d');
+          
+          var data1 = {
+            labels: ['13:00', '14:00', '15:00', '16:00', '17:00', '18:00'],
+            datasets: [{
+              label: 'Kit GTI 01',
+              data: [25.3, 25.4, 25.6, 25.9, 26.1, 26 ],
+              backgroundColor: 'rgba(255, 99, 132, 0.5)',
+              borderColor: 'rgba(255,99,132,1)',
+              borderWidth: 1
+            }]
+          };
+          
+          var options1 = {
+            title: {
+              display: true,
+              text: 'Kit GTI 01'
+            }
+          };
+          
+          new Chart(ctx1, {
+            type: 'line',
+            data: data1,
+            options: options1
+          });
+        </script>
+      </article>
+      <!--Aquí termina la gráfica 1-->
+      <!--Aquí comienza la gráfica 2-->
+      <article id="grafica2" class="grafica">
+        <canvas id="plot2"></canvas>
+        <script>
+          var ctx2 = document.getElementById('plot2').getContext('2d');
+          
+          var data2 = {
+            labels: ['13:00', '14:00', '15:00', '16:00', '17:00', '18:00'],
+            datasets: [{
+              label: 'Kit GTI 02',
+              data: [27.4, 27.4, 27.7, 28, 28.3, 28.5],
+              backgroundColor: 'rgba(54, 162, 235, 0.5)',
+              borderColor: 'rgba(54, 162, 235, 1)',
+              borderWidth: 1
+            }]
+          };
+          
+          var options2 = {
+            title: {
+              display: true,
+              text: 'Kit GTI 02'
+            }
+          };
+          
+          new Chart(ctx2, {
+            type: 'line',
+            data: data2,
+            options: options2
+          });
+        </script>
+      </article>
+      <!--Aquí termina la gráfica 2-->
+      <!--Aquí comienza la gráfica 3-->
+      <article id="grafica3" class="grafica">
+        <canvas id="plot3"></canvas>
+        <script>
+          var ctx3 = document.getElementById('plot3').getContext('2d');
+          
+          var data3 = {
+            labels: ['13:00', '14:00', '15:00', '16:00', '17:00', '18:00'],
+            datasets: [{
+              label: 'Plantas de Lucia',
+              data: [21.9, 21.3, 21, 21, 21.1, 21.3],
+              backgroundColor: [
+              'rgba(255, 99, 132, 0.2)',
+              'rgba(54, 162, 235, 0.2)',
+              'rgba(255, 206, 86, 0.2)'
+              ],
+              borderColor: [
+              'rgba(255, 99, 132, 1)',
+              'rgba(54, 162, 235, 1)',
+              'rgba(255, 206,235,1)'],
+              
+            }],borderWidth: 1,
+          };
+          var options3 = {
+            title: {
+              display: true,
+              text: 'Plantas de lucia'
+            }
+          };
+          
+          new Chart(ctx3, {
+            type: 'line',
+            data: data3,
+            options: options3
+          });
+        </script>
+      </article>
+      <!--Aquí termina la gráfica 3-->
+    </div>
+  </section>
+  <!-- <footer class="pie-pagina" id="pie">
+    
+    <a href="../añadir.html">
+      <img src="/img/icono-mas.png">
+    </a>
+  </footer> -->
+  <script>
+    document.querySelector("#menu").addEventListener(
+            "click",
+            (event) => {
+              let value = event.target.parentNode.dataset.item; // Se cambia el selector a parentNode.dataset.item para seleccionar el valor del atributo data-item del elemento li
+              let tt = "item" + value;
+              let items = document.querySelectorAll("section[id^='item']");
+              items.forEach(
+                      (item)=>{
+                        if(item.id === tt){
+                          item.classList.add("activo");
+                        }else{
+                          item.classList.remove("activo");
+                        }
+                      }
+              )
+              let links = document.querySelectorAll("#menu a");
+              links.forEach((link) => {
+                if (link.parentNode.dataset.item === value) {
+                  link.classList.add("activa");
+                } else {
+                  link.classList.remove("activa");
+                }
+              });
+            }
+  
+  
+  
+    );
+  </script>
+  <script>
+    document.querySelector("#menu-huertos").addEventListener(
+            "click",
+            (event) => {
+              let value = event.target.parentNode.dataset.item; // Se cambia el selector a parentNode.dataset.item para seleccionar el valor del atributo data-item del elemento li
+              let tt = "item" + value;
+              let items = document.querySelectorAll("div[id^='item']");
+              items.forEach(
+                      (item)=>{
+                        if(item.id === tt){
+                          item.classList.add("activo");
+                        }else{
+                          item.classList.remove("activo");
+                        }
+                      }
+              )
+              let links = document.querySelectorAll("#menu-huertos a");
+              links.forEach((link) => {
+                if (link.parentNode.dataset.item === value) {
+                  link.classList.add("activa");
+                } else {
+                  link.classList.remove("activa");
+                }
+              });
+            }
+  
+    );
+  </script>
+  <script>
+    document.querySelectorAll('article:not(:first-of-type)').forEach(function(el) {
+      el.style.display = 'none';
+    });
+  
+    document.querySelectorAll('nav a').forEach(function(el) {
+      el.addEventListener('click', function(event) {
+        event.preventDefault();
+  
+        document.querySelectorAll('article').forEach(function(el) {
+          el.style.display = 'none';
+        });
+  
+        var href = this.getAttribute('href');
+        document.querySelector(href).style.display = 'block';
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+
+.enviar-encuesta {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: stretch;
+    text-align: center;
+    width: 500px;
+}
+/* 
+========================================================================
+|css que tambien esta en consulta, aka se debe de colocsar en el mega css|
+========================================================================
+*/
+
+.enviar-encuesta .producto-motivo{
+    display: flex;
+    flex-direction: column;
+     
+}
+.enviar-encuesta input[type="text"] {
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    height: 50px;
+}
+
+.enviar-encuesta input[type="submit"] {
+    background-color: #5ABFBF;
+    color: white;
+    width: 272px;
+    height: 65px;
+    font-size: 1.3em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.reciclar input[type="submit"]:hover {
+    background-color: #5ABFBF;
+}
+
+@media(max-width: 600px){
+    .enviar-encuesta input[type="text"] {
+        width: 250px;
+        margin: 20px auto;
+    }
+
+    .reciclar{
+        width: 100%;
+    }
+}

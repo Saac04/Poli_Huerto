@@ -1,0 +1,42 @@
+
+    /* Division */
+    .comentarios .linea-arriba-comentario div{
+        display:inline;
+    }
+
+    /* Comentario */
+    .comentarios .comentario{
+        transform:translatex(0px) translatey(0px);
+        margin-bottom:-25px;
+        margin-top:44px;
+        border-bottom-style:solid;
+        border-bottom-width:2px !important;
+        padding-top:-3px;
+        padding-bottom:21px;
+    }
+
+    /* Cosas utilidad */
+    .comentarios .comentario .cosas-utilidad{
+        display:flex;
+        justify-content:space-between;
+    }
+
+    /* Linea arriba comentario */
+    .comentarios .comentario .linea-arriba-comentario{
+        display:flex;
+        justify-content:space-between;
+        flex-wrap:nowrap;
+        float:none;
+    }
+
+    /* Label */
+    .comentarios .linea-arriba-comentario label{
+        margin-left:0px;
+    }
+
+    /* Mostrar utilidad */
+    .comentarios div .mostrar-utilidad{
+        border-radius:7px;
+        width:87px;
+    }
+

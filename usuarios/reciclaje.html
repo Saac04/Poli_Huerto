@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Poli[Huerto]</title>
+    <link rel="stylesheet" href="../css/cabecera.css">
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/body.css">
+    <link rel="stylesheet" href="../css/reciclaje.css">
+</head>
+<body>
+    <!--Aquí comienza el encabezado-->
+    <header id="cabecera-web" role="banner">
+        <!--logo gti-->
+        <a href="../index.html">
+        <img src="../img/logo-gti.png" alt="logo GTI" id="logo-GTI">
+        </a>
+        <h1>Cuidamos tus plantas</h1>
+        <!--logo-mi-cuenta-->
+        <a href="perfil.html">
+        <img src="../img/icono-cuenta1.png" alt="tu cuenta" id="mi-cuenta">
+        </a>
+    
+    </header>
+  <!--Aquí termina el encabezado-->
+  <!--Aquí comienza el menú de la interfaz-->
+  <nav id="menu">
+    <ul>
+      <li data-item="1" class=""><a href="monitorizar.html" >Monitorizar</a></li>
+      <li data-item="3" class=""><a href="consulta.html" >Consulta</a></li>
+      <li data-item="4" class="activa"><a href="#" >Reciclar</a></li>
+    </ul>
+  </nav>
+  <!--Aquí termina el menú de la interfaz-->
+  <!--Aquí comienza la sección de reciclar-->
+    <section class="final reciclar" id="item4">
+    <!--Aquí comienza el formulario de petición de reciclaje sensor-->
+        <form class="enviar-encuesta">
+        <div class='producto-motivo'>
+            <p>Introduzca el item a recliclar</p>
+            <input type="text" placeholder="" required>
+            <p>Introduzca el motivo del reciclaje</p>
+            <input type="text" placeholder="" required>
+        </div>
+        <div>
+            
+            <input type="submit" id="encuesta" value="Enviar">
+        </div>
+        </form>
+    <!--Aquí termina el formulario de petición de reciclaje sensor-->
+    </section>
+  <!--Aquí termina la sección de reciclar-->
+  <!-- <footer class="pie-pagina" id="pie">
+    
+    <a href="../añadir.html">
+      <img src="/img/icono-mas.png">
+    </a>
+  </footer> -->
+  <script>
+    document.querySelector("#menu").addEventListener(
+            "click",
+            (event) => {
+              let value = event.target.parentNode.dataset.item; // Se cambia el selector a parentNode.dataset.item para seleccionar el valor del atributo data-item del elemento li
+              let tt = "item" + value;
+              let items = document.querySelectorAll("section[id^='item']");
+              items.forEach(
+                      (item)=>{
+                        if(item.id === tt){
+                          item.classList.add("activo");
+                        }else{
+                          item.classList.remove("activo");
+                        }
+                      }
+              )
+              let links = document.querySelectorAll("#menu a");
+              links.forEach((link) => {
+                if (link.parentNode.dataset.item === value) {
+                  link.classList.add("activa");
+                } else {
+                  link.classList.remove("activa");
+                }
+              });
+            }
+    );
+  </script>
+   <!-- <footer class="pie-pagina" id="pie">
+    
+    <a href="../añadir.html">
+      <img src="/img/icono-mas.png">
+    </a>
+  </footer> -->
+</body>
+</html>
