@@ -20,19 +20,12 @@ article{
 }
 p{
     max-width: 880px; /*limitar seccion*/
-    padding: 1rem;
+    padding: 2rem;
     margin: 10px auto;
     border-radius: 5px;
     background: rgba(255,255,255, 0.33);
     display: flex;
     align-items: end;
-}
-
-
-
-#carrusel-imágenes-Kit {
-    order: 1;
-    float: left;
 }
 
 #Comentarios {
@@ -44,11 +37,8 @@ p{
 #Comentarios img {
     margin-left: 20px;
 }
-
-.carousel-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.carousel-control-next-icon{
+    color: black;
 }
 article div h3{
     color: #BEC7D8;
@@ -75,27 +65,13 @@ article div a img{
     margin-top: 10px;
 }
 
-.carousel-prev,
-.carousel-next {
-    font-size: 36px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0 10px;
-}
-div div a input{
-    margin: 1000px;
-}
 #contactanos{
-    text-decoration: none;
-    background-color: #5ABFBF;
+    background-color: #00CFA4;
     padding: .5rem;
     color: white;
-    width: 500px;
-    font-size: 1.3em;
+    width: 140px;
     border: none;
     border-radius: 10px;
-    cursor: pointer;
     margin: 0rem 30rem auto;
 }
 
@@ -107,20 +83,6 @@ div div a input{
     padding: 10px;
     text-align: center;
 }
-a{
-    text-decoration: none;
-}
 
-@media (max-width: 500px) {
-    #contactanos{
-        margin-left: .7em;
-        margin-right: .7em;
-    }
-    p{
-        text-align: justify-all;
-    }
-    #contactanos{
-        max-width: 29rem;
-    }
-}
+@media (max-width: 768px)
 
