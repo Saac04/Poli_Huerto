@@ -1,15 +1,7 @@
-footer{
-    background: black;
-    margin: 0;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    
-}
-footer img{
-  width: 80px;
-  height: 80px;
-  padding: 15px;
+#footer {
+  background-color: #00CFA4;
+  display: flex;
+  flex: 0 1 0;
+  align-items: center;
+  justify-content: center;
 }
