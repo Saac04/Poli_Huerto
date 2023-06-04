@@ -12,9 +12,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <link rel="stylesheet" href="../css/cabecera.css">
-  <link rel="stylesheet" href="../css/menu.css">
-  <link rel="stylesheet" href="../css/body.css">
   <link rel="stylesheet" href="../css/consulta.css">
+  <link rel="stylesheet" href="../css/menu-desplegable.css">
 </head>
 <body>
   <!--Aquí comienza el encabezado-->
@@ -72,59 +71,28 @@
   <!--Aquí termina el encabezado-->
 
   <!--Aquí comienza la sección de consulta-->
-    <section class="final consulta" id="item3">
-        <div>
-            <form class="form">
-                <div>
-                    <!--<input type="text" id="descripcion" placeholder="Por favor, comunique su problema con nosotros" required> -->        
-                    <textarea id="descripcion" name="descripcion" placeholder="Por favor, comunique su problema con nosotros"></textarea>
-                </div>
-                <div>
-                    <input type="submit" id="Reporte" value="Enviar">
-                </div>
-            </form>
-        </div>
-    </section>
+  <section class="container">
+    <div class="card">
+      <div class="card-body">
+        <h2 class="card-title">Consulta</h2>
+        <hr>
+        <p class="card-text">Seleccione el tipo de consulta:</p>
+        <nav id="menu-desplegable">
+          <a>Consultas ˅</a>  
+          <ul>
+            <li data-item="6"><a href="#grafica1" class="activa">Fallos en el sensor</a></li>
+            <li data-item="7"><a href="#grafica2" class="">Fallos en la web</a></li>
+            <li data-item="8"><a href="#grafica3" class="">Servicio no dado</a></li>
+            <li data-item="8"><a href="#grafica3" class="">Otros</a></li>
+          </ul>
+        </nav>
+        <textarea class="form-control mb-3" rows="4" id="motivo-consulta"></textarea>
+        <button class="btn btn-primary" id="enviar">Enviar</button>
+      </div>
+    </div>
+  </section>
   <!--Aquí termina la sección de consulta-->
-  <!-- <footer class="pie-pagina" id="pie">
-    
-    <a href="../añadir.html">
-      <img src="/img/icono-mas.png">
-    </a>
-  </footer> -->
-  <script>
-    document.querySelector("#menu").addEventListener(
-            "click",
-            (event) => {
-              let value = event.target.parentNode.dataset.item; // Se cambia el selector a parentNode.dataset.item para seleccionar el valor del atributo data-item del elemento li
-              let tt = "item" + value;
-              let items = document.querySelectorAll("section[id^='item']");
-              items.forEach(
-                      (item)=>{
-                        if(item.id === tt){
-                          item.classList.add("activo");
-                        }else{
-                          item.classList.remove("activo");
-                        }
-                      }
-              )
-              let links = document.querySelectorAll("#menu a");
-              links.forEach((link) => {
-                if (link.parentNode.dataset.item === value) {
-                  link.classList.add("activa");
-                } else {
-                  link.classList.remove("activa");
-                }
-              });
-            }
-    );
-  </script>
-   <!-- <footer class="pie-pagina" id="pie">
-    
-    <a href="../añadir.html">
-      <img src="/img/icono-mas.png">
-    </a>
-  </footer> -->
+
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
