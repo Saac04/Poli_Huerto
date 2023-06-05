@@ -1,65 +1,47 @@
-#perfil {
-  width: 700px;
-  height: 544px;
-  margin: 0px auto;
-  margin-bottom: 50px;
 
-}
-
-#perfil h1{
-  justify-content: left;
-}
-
-#datos {
+.form-group {
   display: flex;
-  flex-direction: column;
   align-items: center;
+}
+
+#perfilForm label {
+  flex: 0 0 150px;
+  margin-right: 10px;
+}
+
+#perfilForm input[type="text"],
+#perfilForm input[type="email"] {
+  flex: 1;
+}
+
+.boton {
+  display: flex;
   justify-content: center;
-  margin-top: 30px;
 }
 
-#datos div {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  width: 500px;
-  margin: 10px 0;
+#footer{
+  margin-top: 225px;
 }
 
-#datos div label {
-  width: 200px;
-}
-
-#cerrar-sesion {
-  background-color: #5ABFBF;
-  color: white;
-  width: 200px;
-  font-size: 1.3em;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  margin-left: 200px;
-  margin-top: 50px;
-}
-
-@media screen and (max-width: 600px) {
-  #perfil {
-    width: 100%;
-    height: auto;
-    padding: 20px;
-  }
-  #datos{
-    display: flex;
-    justify-content: space-around;
-    margin-left: 100px;
+@media (max-width: 767px) {
+  .form-group {
+    justify-content: flex-start;
   }
 
+  #perfilForm label {
+    margin-right: 0;
+  }
 
-  #cerrar-sesion {
-    margin: 20px auto;
-    width: 200px;
-    margin-left: 100px;
-    margin-top: 100px;
+  #perfilForm input[type="text"],
+  #perfilForm input[type="email"] {
+    width: auto;
+  }
+
+  .boton {
+    justify-content: center;
+  }
+
+  #footer{
+    margin-top: 275px;
   }
 }
