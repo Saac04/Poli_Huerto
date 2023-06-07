@@ -28,6 +28,11 @@ p{
     align-items: end;
 }
 
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #000000; /* Cambia este color a tu elección */
+}
+
 #Comentarios {
     order: 3;
     float: right;
@@ -65,7 +70,7 @@ article div a img{
     margin-top: 10px;
 }
 
-#contactanos{
+#contactanos {
     background-color: #00CFA4;
     padding: .5rem;
     color: white;
@@ -76,13 +81,14 @@ article div a img{
 }
 
 #contactanos {
-    max-width: 25em;
+    width: 180px;
+    height: 50px;
     text-decoration: none;
     display: block;
-    margin: 0 auto;
+    margin: 50px auto;
     padding: 10px;
     text-align: center;
 }
 
-@media (max-width: 768px)
+@media (max-width: 900px)
 
