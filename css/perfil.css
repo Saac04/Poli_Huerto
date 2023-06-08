@@ -1,53 +1,75 @@
+/*-----------------------------
+Estolos para la pagina de perfil
+-----------------------------*/
 
+/*-----------------------------
+Estolos para ordenador
+-----------------------------*/
+
+/* Estilo para el grupo de formulario */
 .form-group {
   display: flex;
   align-items: center;
 }
 
+/* Estilo para las etiquetas dentro del formulario con ID perfilForm */
 #perfilForm label {
   flex: 0 0 150px;
   margin-right: 10px;
 }
 
+/* Estilo para los campos de texto y correo electrónico dentro del formulario con ID perfilForm */
 #perfilForm input[type="text"],
 #perfilForm input[type="email"] {
   flex: 1;
 }
 
+/* Estilo para el contenedor de los botones */
 .boton {
   display: flex;
   justify-content: center;
 }
 
-#editarBtn{
+/* Estilo para el botón con ID editarBtn */
+#editarBtn {
   background-color: #00CEA3;
   border: none;
   font-size: 36px;
 }
 
-#editarBtn:hover{
+/* Estilo para el botón con ID editarBtn al pasar el cursor por encima */
+#editarBtn:hover {
   color: #00CEA3;
   background-color: #ffffff;
   border: 2px solid #00CEA3;
 }
 
-#guardarBtn{
+/* Estilo para el botón con ID guardarBtn */
+#guardarBtn {
   background-color: #00CEA3;
   border: none;
   font-size: 36px;
 }
 
-#guardarBtn:hover{
+/* Estilo para el botón con ID guardarBtn al pasar el cursor por encima */
+#guardarBtn:hover {
   color: #00CEA3;
   background-color: #ffffff;
   border: 2px solid #00CEA3;
 }
 
-#footer{
+/* Estilo para el pie de página con ID footer */
+#footer {
   margin-top: 225px;
 }
 
+/*-----------------------------
+Estolos para mobil
+-----------------------------*/
+
+/* Media Query para pantallas con un ancho máximo de 767px */
 @media (max-width: 767px) {
+
   .form-group {
     justify-content: flex-start;
   }
@@ -65,15 +87,15 @@
     justify-content: center;
   }
 
-  #editarBtn{
+  #editarBtn {
     font-size: 18px;
   }
 
-  #guardarBtn{
+  #guardarBtn {
     font-size: 18px;
   }
 
-  #footer{
+  #footer {
     margin-top: 275px;
   }
 }

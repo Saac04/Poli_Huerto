@@ -1,18 +1,32 @@
+/*----------------------------
+Estilos para la pagina de anyadir.
+----------------------------*/
+
+
+/*-----------------------------
+Estolos para ordenador
+-----------------------------*/
+
+
 h2 {
+  /* Estilos para el título h2 */
   text-align: center;
 }
 
 .container{
+  /* Estilos para el contenedor */
   margin-top: 5%;
   margin-right: 5%;
 }
 
 .counter {
+  /* Estilos para el contador */
   display: flex;
   align-items: center;
 }
 
 .counter button {
+  /* Estilos para los botones del contador */
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -27,19 +41,21 @@ h2 {
 }
 
 .counter button:hover{
+  /* Estilos para los botones del contador al pasar el cursor */
   color: #ffffff;
   background-color: #000000;
 }
 
 .counter input {
+  /* Estilos para el campo de entrada del contador */
   text-align: center;
   width: 200px;
   margin: 0 10px;
   border: 0;
-
 }
 
 #Pedir{
+  /* Estilos para el botón "Pedir" */
   background-color: #00CEA3;
   border: none;
   margin-top: 5%;
@@ -49,11 +65,20 @@ h2 {
 }
 
 #Pedir:hover{
+  /* Estilos para el botón "Pedir" al pasar el cursor */
   color: #00CEA3;
   background-color: #ffffff;
   border: 2px solid #00CEA3;
 }
+
+
+/*-----------------------------
+Estolos para tamaño medio
+-----------------------------*/
+
+
 @media(max-width: 900Px){
+  /* Estilos para pantallas con ancho máximo de 900px */
   .container{
     display: flex;
     flex-direction: column;
@@ -93,12 +118,18 @@ h2 {
   }
 
   #Pedir{
-
     margin-left: 2%;
     margin-top: 20%;
   }
 }
+
+
+/*-----------------------------
+Estolos para mobil
+-----------------------------*/
+
 @media(max-width:767px){
+  /* Estilos para pantallas con ancho máximo de 767px */
   .container{
     display: flex;
     flex-direction: column;
