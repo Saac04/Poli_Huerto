@@ -14,9 +14,8 @@ body {
 
   .card {
     background-color: white;
-    width: 507px;
-    height: 550px;
     border-radius: 10px;
+    margin-top: 5%;
   }
 
   .card-body{
@@ -28,25 +27,31 @@ body {
 
   #motivo-consulta {
     border-radius: 10px;
-    width: 300px;
-    height: 170px;
     border-color: #00CEA3;
+    margin-top: 10%;
+    width: 90%;
   }
 
   #enviar {
     background-color: #00CEA3;
     border: none;
+    margin-top: 5%;
+    font-size: 36px;
   }
 
-@media(min-width: 767px){
-  .container{
-    width: 100%;
+  #enviar:hover{
+    color: #00CEA3;
+    background-color: #ffffff;
+    border: 2px solid #00CEA3;
+  }
+
+@media(max-width: 767px){
+  .card{
+    margin-top: 20%;
+  }
+  #enviar{
+    font-size: 18px;
   }
 }
 
-@media(min-width){
-  .container{
-    width: 100%;
-  }
-}
 
