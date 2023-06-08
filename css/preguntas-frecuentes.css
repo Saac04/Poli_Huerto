@@ -1,31 +1,37 @@
+/* Estilos para el elemento <body> */
 body {
     background-color: white;
     margin: 0px auto;
 }
 
-.Preguntas-frecuentes{
+/* Estilos para el elemento con clase "Preguntas-frecuentes" */
+.Preguntas-frecuentes {
     margin: 0px auto;
     max-width: 80%;
 }
-a{
+
+/* Estilos para los elementos <a> */
+a {
     margin-left: 50px;
     font-size: 20px;
     color: #00CEA3;
-
 }
-.preguntas{
+
+/* Estilos para el elemento con clase "preguntas" */
+.preguntas {
     flex: 1 1 40%;
     order: 0;
     margin-bottom: 30px;
 }
 
-footer{
+/* Estilos para el elemento <footer> */
+footer {
     flex: 1 1 0;
-
     order: 6;
-
 }
-footer{
+
+/* Estilos adicionales para el elemento <footer> */
+footer {
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -35,12 +41,16 @@ footer{
     width: 100%;
     margin: 0px auto;
 }
-footer a{
+
+/* Estilos para los elementos <a> dentro de <footer> */
+footer a {
     text-decoration: none;
     color: black;
 }
-@media (max-width: 768px){
-    .Preguntas-frecuentes{
+
+/* Estilos para pantallas con un ancho máximo de 768px */
+@media (max-width: 768px) {
+    .Preguntas-frecuentes {
         flex-direction: column;
     }
 }

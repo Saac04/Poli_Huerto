@@ -8,8 +8,9 @@
     order: 2;
 }
 
-article{
-    max-width: 880px; /*limitar seccion*/
+/* Estilos para el elemento <article> */
+article {
+    max-width: 880px; /* Limita el ancho máximo de la sección */
     padding: 1rem;
     margin: 0 auto;
     border-radius: 5px;
@@ -18,8 +19,10 @@ article{
     align-items: initial;
     justify-content: space-around;
 }
-p{
-    max-width: 880px; /*limitar seccion*/
+
+/* Estilos para los elementos <p> */
+p {
+    max-width: 880px; /* Limita el ancho máximo de la sección */
     padding: 2rem;
     margin: 10px auto;
     border-radius: 5px;
@@ -28,6 +31,7 @@ p{
     align-items: end;
 }
 
+/* Estilos para los iconos del carrusel */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     background-color: #000000; /* Cambia este color a tu elección */
@@ -42,34 +46,43 @@ p{
 #Comentarios img {
     margin-left: 20px;
 }
-.carousel-control-next-icon{
+
+.carousel-control-next-icon {
     color: black;
 }
-article div h3{
+
+/* Estilos para los títulos dentro del elemento <article> */
+article div h3 {
     color: #BEC7D8;
 }
-article div img{
+
+/* Estilos para las imágenes dentro del elemento <article> */
+article div img {
     height: 250px;
 }
 
-article div a img{
+/* Estilos para las imágenes dentro de un enlace dentro del elemento <article> */
+article div a img {
     height: 30px;
 }
 
+/* Estilos para los elementos .carousel-item */
 .carousel-item {
     display: none;
 }
 
+/* Estilos para el elemento .carousel-item.active */
 .carousel-item.active {
     display: block;
 }
 
+/* Estilos para los botones del carrusel */
 .carousel-buttons {
     display: flex;
     justify-content: center;
     margin-top: 10px;
 }
-
+/* Estilos para el boton de contactanos */
 #contactanos {
     background-color: #00CFA4;
     padding: .5rem;
@@ -90,5 +103,8 @@ article div a img{
     text-align: center;
 }
 
-@media (max-width: 900px)
+@media (max-width: 900px) {
+    /* Estilos para pantallas con un ancho máximo de 900px */
+
+}
 
