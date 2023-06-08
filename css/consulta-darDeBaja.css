@@ -1,57 +1,77 @@
+/*----------------------------
+Estilos para la pagina de consulta y dar de baja.
+------------------------------*/
+
+/*-----------------------------
+Estolos para ordenador
+-----------------------------*/
+
 body {
-    background-color: #00CEA3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
- 
-  }
+  /* Estilos para el body */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.container {
+  /* Estilos para la seccion container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .card {
-    background-color: white;
-    border-radius: 10px;
-    margin-top: 5%;
-  }
+.card {
+  /* Estilos para card */
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 5%;
+}
 
-  .card-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.card-body{
+  /* Estilos para el body de card */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  }
+#motivo-consulta {
+  /* Estilos para el campo de motivo de consulta */
+  border-radius: 10px;
+  border-color: #00CEA3;
+  margin-top: 10%;
+  width: 90%;
+}
 
-  #motivo-consulta {
-    border-radius: 10px;
-    border-color: #00CEA3;
-    margin-top: 10%;
-    width: 90%;
-  }
+#enviar {
+  /* Estilos para el botón de enviar */
+  background-color: #00CEA3;
+  border: none;
+  margin-top: 5%;
+  font-size: 36px;
+}
 
-  #enviar {
-    background-color: #00CEA3;
-    border: none;
-    margin-top: 5%;
-    font-size: 36px;
-  }
+#enviar:hover{
+  /* Estilos para el botón de enviar al pasar el cursor */
+  color: #00CEA3;
+  background-color: #ffffff;
+  border: 2px solid #00CEA3;
+}
 
-  #enviar:hover{
-    color: #00CEA3;
-    background-color: #ffffff;
-    border: 2px solid #00CEA3;
-  }
+
+/*-----------------------------
+Estolos para mobil
+-----------------------------*/
 
 @media(max-width: 767px){
-  .card{
-    margin-top: 20%;
-  }
-  #enviar{
-    font-size: 18px;
-  }
+.card{
+  /* Estilos para card en pantallas con ancho máximo de 767px */
+  margin-top: 20%;
 }
+#enviar{
+  /* Estilos para el botón de enviar en pantallas con ancho máximo de 767px */
+  font-size: 18px;
+}
+}
+
 
 

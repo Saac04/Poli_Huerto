@@ -76,6 +76,7 @@
   </header>
   <!--Aquí termina el encabezado-->
 
+  <!--Aqui empieza la seccion de perfil-->
   <section class="container">
     <h2>Mi Perfil</h2>
     
@@ -83,44 +84,61 @@
       <div class="form-group">
         <label for="nombreUsuario">Nombre de usuario:</label>
         <input type="text" class="form-control" id="nombreUsuario" value="usuario123" readonly>
+        <!-- El campo de nombre de usuario muestra "usuario123" y es de solo lectura -->
       </div>
       
       <div class="form-group">
         <label for="nombre">Nombre:</label>
         <input type="text" class="form-control" id="nombre" value="John" readonly>
+        <!-- El campo de nombre muestra "John" y es de solo lectura -->
       </div>
       
       <div class="form-group">
         <label for="apellidos">Apellidos:</label>
         <input type="text" class="form-control" id="apellidos" value="Doe" readonly>
+        <!-- El campo de apellidos muestra "Doe" y es de solo lectura -->
       </div>
       
       <div class="form-group">
         <label for="correo">Correo:</label>
         <input type="email" class="form-control" id="correo" value="johndoe@example.com" readonly>
+        <!-- El campo de correo muestra "johndoe@example.com" y es de solo lectura -->
       </div>
       
       <div class="form-group">
         <label for="numSensores">Número de sensores:</label>
         <input type="number" class="form-control" id="numSensores" value="3" readonly>
+        <!-- El campo de número de sensores muestra "3" y es de solo lectura -->
       </div>
       
       <div class="boton">
         <button type="button" class="btn btn-primary" id="editarBtn">Editar</button>
+        <!-- El botón "Editar" permite editar el perfil -->
         <button type="submit" class="btn btn-success d-none" id="guardarBtn">Guardar</button>
+        <!-- El botón "Guardar" se oculta inicialmente, se mostrará al editar el perfil -->
       </div>
     </form>
   </section>
+  <!--Aqui empieza la seccion de perfil-->
 
+  <!--Aqui empieza el footer-->
   <footer id="footer">
       <p>&copy; 2023 Poli[Huerto]</p>
   </footer>
+  <!--Aqui termina el footer-->
 
+  <!-- Se incluyen los siguientes scripts para funcionamiento -->
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <!-- Script de Bootstrap para estilos y comportamiento -->
   <script src="../js/perfil.js"></script>
+  <!-- Script personalizado perfil.js -->
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <!-- Script de jQuery -->
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <!-- Script de Popper.js -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+  <!-- Script de Bootstrap -->
 </body>
+
 
 </html>
