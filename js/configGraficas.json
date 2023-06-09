@@ -1,0 +1,42 @@
+{
+  "temperatura": {
+    "tipoEscala": "ºC",
+    "colorLinea": "rgba(255, 0, 0, 0.6)",
+    "colorPunto": "rgba(255, 0, 0, 0.3)"
+  },
+  "humedad": {
+    "tipoEscala": "%",
+    "colorLinea": "rgba(0, 170, 228, 0.6)",
+    "colorPunto": "rgba(0, 170, 228, 0.3)",
+    "min": 0,
+    "max": 100
+  },
+  "luminosidad": {
+    "tipoEscala": "%",
+    "colorLinea": "rgba(255, 220, 0, 0.8)",
+    "colorPunto": "rgba(255, 220, 0, 0.3)",
+    "min": 0,
+    "max": 100
+  },
+  "luz_UV": {
+    "tipoEscala": "UVIs",
+    "colorLinea": "rgba(76, 40, 130, 0.6)",
+    "colorPunto": "rgba(76, 40, 130, 0.3)",
+    "min": 0,
+    "max": 11
+  },
+  "salinidad": {
+    "tipoEscala": "CE",
+    "colorLinea": "rgba(167, 167, 167, 1)",
+    "colorPunto": "rgba(255, 255, 255, 1)",
+    "min": 0,
+    "max": 10
+  },
+  "pH": {
+    "tipoEscala": "",
+    "colorLinea": "rgba(90, 190, 90, 1)",
+    "colorPunto": "rgba(90, 190, 90, 0.3)",
+    "min": 0,
+    "max": 14
+  }
+}
