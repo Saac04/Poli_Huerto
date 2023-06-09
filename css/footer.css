@@ -1,7 +1,14 @@
 #footer {
   background-color: #00CFA4;
   display: flex;
-  flex: 0 1 0;
+  position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 60px; /* Altura del footer */
   align-items: center;
   justify-content: center;
+}
+
+#footer p{
+  color: #ffffff;
 }

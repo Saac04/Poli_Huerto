@@ -1,42 +1,93 @@
-
-    /* Division */
-    .comentarios .linea-arriba-comentario div{
-        display:inline;
+.mostrar-utilidad.btn-outline-dark:hover {
+    background-color: #00CFA4;
+    border-color: #00CFA4;
+  }
+  /* Estilos para pantallas grandes */
+  @media (min-width: 992px) {
+    .comentarios {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+      background-color: #ffffff;
     }
 
-    /* Comentario */
-    .comentarios .comentario{
-        transform:translatex(0px) translatey(0px);
-        margin-bottom:-25px;
-        margin-top:44px;
-        border-bottom-style:solid;
-        border-bottom-width:2px !important;
-        padding-top:-3px;
-        padding-bottom:21px;
+    .comentario {
+      border: 1px solid #000;
+      border-bottom-width: 0;
+      padding: 20px;
     }
 
-    /* Cosas utilidad */
-    .comentarios .comentario .cosas-utilidad{
-        display:flex;
-        justify-content:space-between;
+    .comentario:last-child {
+      border-bottom-width: 1px;
     }
 
-    /* Linea arriba comentario */
-    .comentarios .comentario .linea-arriba-comentario{
-        display:flex;
-        justify-content:space-between;
-        flex-wrap:nowrap;
-        float:none;
+    .comentario .segmento-linea-arriba {
+      flex-direction: row;
+      align-items: center;
     }
 
-    /* Label */
-    .comentarios .linea-arriba-comentario label{
-        margin-left:0px;
+    .comentario .segmento-linea-arriba .perfil {
+      margin-right: 10px;
+    }
+  }
+
+  /* Estilos para pantallas pequeñas */
+  @media (max-width: 991px) {
+    body{
+      background-color: #ffffff;
+    }
+    .comentario .segmento-linea-arriba .perfil {
+      margin-right: 10px;
+    }
+    .mostrar-utilidad.btn-outline-dark:hover {
+      background-color: #00CFA4;
+      border-color: #00CFA4;
+    }
+  }
+
+  .mostrar-utilidad.btn-outline-dark:hover {
+    background-color: #00CFA4;
+    border-color: #00CFA4;
+  }
+  .mostrar-utilidad.btn-outline-dark:hover {
+    background-color: #00CFA4;
+    border-color: #00CFA4;
+  }
+  /* Estilos para pantallas grandes */
+  @media (min-width: 992px) {
+    .comentarios {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
     }
 
-    /* Mostrar utilidad */
-    .comentarios div .mostrar-utilidad{
-        border-radius:7px;
-        width:87px;
+    .comentario {
+      border: 1px solid #000;
+      border-bottom-width: 0;
+      padding: 20px;
+      background-color: #00CFA4; /* Nueva línea agregada */
     }
 
+    .comentario:last-child {
+      border-bottom-width: 1px;
+    }
+
+    .comentario .segmento-linea-arriba {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .comentario .segmento-linea-arriba .perfil {
+      margin-right: 10px;
+    }
+  }
+
+  /* Estilos para pantallas pequeñas */
+  @media (max-width: 991px) {
+    body{
+      background-color: #00CFA4;
+    }
+    .comentario .segmento-linea-arriba .perfil {
+      margin-right: 10px;
+    }
+  }

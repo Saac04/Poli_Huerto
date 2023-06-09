@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Poli[Huerto]</title>
+  <title>Consulta</title>
 
   <!-- link para Bootstrap -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
@@ -12,8 +12,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <link rel="stylesheet" href="../css/cabecera.css">
-  <link rel="stylesheet" href="../css/consulta.css">
+  <link rel="stylesheet" href="../css/consulta-darDeBaja.css">
   <link rel="stylesheet" href="../css/menu-desplegable.css">
+  <link rel="stylesheet" href="../css/fonts.css">
+  <link rel="stylesheet" href="../css/footer.css">
 </head>
 <body>
   <!--Aquí comienza el encabezado-->
@@ -45,10 +47,10 @@
             <a class="nav-link" href="anyadir.html">Solicitar Mas</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="#">Consultas <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="consulta.html">Consultas <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Dar de Baja</a>
+            <a class="nav-link" href="dar-de-baja.html">Dar de Baja</a>
           </li>
         </ul>
       </div>
@@ -74,10 +76,10 @@
   <section class="container">
     <div class="card">
       <div class="card-body">
-        <h2 class="card-title">Consulta</h2>
+        <h2 class="card-title">Consulta</h2><!--Titulo del apartado-->
         <hr>
         <p class="card-text">Seleccione el tipo de consulta:</p>
-        <nav id="menu-desplegable">
+        <nav id="menu-desplegable"><!--Menu desplegable para elegir el tipo de consulta-->
           <a>Consultas ˅</a>  
           <ul>
             <li data-item="6"><a href="#grafica1" class="activa">Fallos en el sensor</a></li>
@@ -86,13 +88,20 @@
             <li data-item="8"><a href="#grafica3" class="">Otros</a></li>
           </ul>
         </nav>
-        <textarea class="form-control mb-3" rows="4" id="motivo-consulta"></textarea>
-        <button class="btn btn-primary" id="enviar">Enviar</button>
+        <textarea class="form-control mb-3" rows="4" id="motivo-consulta"></textarea><!--area de texto-->
+        <button class="btn btn-primary" id="enviar">Enviar</button><!--boton para enviar-->
       </div>
     </div>
   </section>
   <!--Aquí termina la sección de consulta-->
 
+  <!--Aqui empieza el footer-->
+  <footer id="footer">
+    <p>&copy; 2023 Poli[Huerto]</p>
+  </footer>
+   <!--Aqui termina el footer-->
+
+   <!--Aqui van los links a los scripts-->
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>

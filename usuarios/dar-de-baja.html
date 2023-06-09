@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8" />
-  <title>Perfil</title>
+  <meta charset="UTF-8">
+  <title>Dar de baja</title>
 
   <!-- link para Bootstrap -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
@@ -11,16 +10,13 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <!-- link para usar Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- link para el css de la cabecera -->
+
   <link rel="stylesheet" href="../css/cabecera.css">
-  <!-- link para el css de perfil -->
-  <link rel="stylesheet" href="../css/perfil.css">
-  <!-- link para el css de las fuentes -->
+  <link rel="stylesheet" href="../css/consulta-darDeBaja.css">
+  <link rel="stylesheet" href="../css/menu-desplegable.css">
   <link rel="stylesheet" href="../css/fonts.css">
-  <!-- link para el css de las fuentes -->
   <link rel="stylesheet" href="../css/footer.css">
 </head>
-
 <body>
   <!--Aquí comienza el encabezado-->
   <header>
@@ -53,8 +49,8 @@
           <li class="nav-item">
             <a class="nav-link" href="consulta.html">Consultas</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Dar de Baja</a>
+          <li class="nav-item active">
+            <a class="nav-link" href="dar-de-baja.html">Dar de Baja<span class="sr-only">(current)</span></a>
           </li>
         </ul>
       </div>
@@ -68,7 +64,7 @@
         <!-- Menu dropown -->
         <div class="dropdown-menu">
           <!-- links -->
-          <a class="dropdown-item" href="#">Mi Perfil</a>
+          <a class="dropdown-item" href="perfil.html">Mi Perfil</a>
           <a class="dropdown-item" href="index.html">Cerrar Sesión</a>
         </div>
       </div> 
@@ -76,69 +72,33 @@
   </header>
   <!--Aquí termina el encabezado-->
 
-  <!--Aqui empieza la seccion de perfil-->
+  <!--Aquí comienza la sección de consulta-->
   <section class="container">
-    <h2>Mi Perfil</h2>
-    
-    <form id="perfilForm">
-      <div class="form-group">
-        <label for="nombreUsuario">Nombre de usuario:</label>
-        <input type="text" class="form-control" id="nombreUsuario" value="ruby" readonly>
-        <!-- El campo de nombre de usuario muestra "usuario123" y es de solo lectura -->
+    <div class="card">
+      <div class="card-body">
+        <h2 class="card-title">Dar de baja</h2><!--Titulo de la pagina-->
+        <hr>
+        <p class="card-text">Seleccione el huerto que desee dar de baja:</p>
+        <nav id="menu-desplegable"><!--Menu desplegable para elegir el kit que quieres dar de baja-->
+          <a>Huertos ˅</a>  
+          <ul>
+            <li data-item="6"><a href="#grafica1" class="activa">Kit GTI 01</a></li>
+            <li data-item="7"><a href="#grafica2" class="">Kit GTI 02</a></li>
+            <li data-item="8"><a href="#grafica3" class="">Plantas de Lucia</a></li>
+          </ul>
+        </nav>
+        <textarea class="form-control mb-3" rows="4" id="motivo-consulta"></textarea><!--aera de texto-->
+        <button class="btn btn-primary" id="enviar">Dar de baja</button><!--boton para enviar-->
       </div>
-      
-      <div class="form-group">
-        <label for="nombre">Nombre:</label>
-        <input type="text" class="form-control" id="nombre" value="Ruben" readonly>
-        <!-- El campo de nombre muestra "John" y es de solo lectura -->
-      </div>
-      
-      <div class="form-group">
-        <label for="apellidos">Apellidos:</label>
-        <input type="text" class="form-control" id="apellidos" value="Garcia Quiralte" readonly>
-        <!-- El campo de apellidos muestra "Doe" y es de solo lectura -->
-      </div>
-      
-      <div class="form-group">
-        <label for="correo">Correo:</label>
-        <input type="email" class="form-control" id="correo" value="ruby@gmail.com" readonly>
-        <!-- El campo de correo muestra "johndoe@example.com" y es de solo lectura -->
-      </div>
-      
-      <div class="form-group">
-        <label for="numSensores">Número de sensores:</label>
-        <input type="number" class="form-control" id="numSensores" value="1" readonly>
-        <!-- El campo de número de sensores muestra "3" y es de solo lectura -->
-      </div>
-      
-      <div class="boton">
-        <button type="button" class="btn btn-primary" id="editarBtn">Editar</button>
-        <!-- El botón "Editar" permite editar el perfil -->
-        <button type="submit" class="btn btn-success d-none" id="guardarBtn">Guardar</button>
-        <!-- El botón "Guardar" se oculta inicialmente, se mostrará al editar el perfil -->
-      </div>
-    </form>
+    </div>
   </section>
-  <!--Aqui empieza la seccion de perfil-->
-
-  <!--Aqui empieza el footer-->
+  <!--Aquí termina la sección de consulta-->
   <footer id="footer">
-      <p>&copy; 2023 Poli[Huerto]</p>
+    <p>&copy; 2023 Poli[Huerto]</p>
   </footer>
-  <!--Aqui termina el footer-->
-
-  <!-- Se incluyen los siguientes scripts para funcionamiento -->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-  <!-- Script de Bootstrap para estilos y comportamiento -->
-  <script src="../js/perfil.js"></script>
-  <!-- Script personalizado perfil.js -->
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <!-- Script de jQuery -->
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-  <!-- Script de Popper.js -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
-  <!-- Script de Bootstrap -->
 </body>
-
 
 </html>
