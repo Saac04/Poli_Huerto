@@ -29,11 +29,40 @@ p{
     color: black;
 }
 
+.nav-link{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 24px;
+    font-weight: 400px;
+    color: black;
+}
+
+.boton-texto{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 22px;
+    font-weight: 400px;
+    color: black;
+
+}
+
+@media(max-width: 1205px) {
+    .boton-texto{
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 992px){
+
+    h1{
+        font-size: 48px;
+    }
+    .nav-link{
+        font-size: 18px;
+    }
+
+}
 
 @media(max-width: 767px){
-    h1 {  
-        font-size: 32px;
-    }
+
     
     h2{
         font-size: 24px;
@@ -44,6 +73,15 @@ p{
     }
     
     p{ 
-        font-size: 14px;
+        font-size: 18px;
     }
+
+}
+
+@media (max-width: 530px) {
+
+    h1{
+        font-size: 32px
+    }
+    
 }

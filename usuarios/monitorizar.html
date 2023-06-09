@@ -4,8 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
-  <title>Poli[Huerto]</title>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <title>monitorizar</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+  <script src="../js/usuario_final_registrado.js"></script>
   
   <!-- link para Bootstrap -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
@@ -15,14 +17,16 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- css  -->
   <link rel="stylesheet" href="../css/monitorizar.css">
+  <link rel="stylesheet" href="../css/fonts.css">
   <link rel="stylesheet" href="../css/cabecera.css">
-  <link rel="stylesheet" href="../css/menu-desplegable.css">
-  
   
 </head>
 <body>
+
+
   <!--Aquí comienza el encabezado-->
   <header>
+    
     <nav class="cabecera navbar navbar-expand-md navbar-light fixed-top" id="cabecera-web" role="banner">
       
       <!-- Aqui esta el logotipo de la empresa -->
@@ -37,6 +41,7 @@
           <path class="line top" d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20" />
           <path class="line middle" d="m 70,50 h -40" />
           <path class="line bottom" d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20" />
+        </svg>
       </button>
       
       <!-- Aqui va el menu colapsable -->
@@ -58,6 +63,7 @@
         </ul>
       </div>
       
+      
       <!-- Boton del usuario -->
       <div class="dropdown">
         <button class="btn" type="button" data-toggle="dropdown" aria-expanded="false">
@@ -73,243 +79,72 @@
       </div> 
     </nav>
   </header>
+  
+
+  
   <!--Aquí termina el encabezado-->
 
 
-  
-  
-  
-  
-  <!-- <section>
-    <!-- Aquí comienza el div de las graficas 
-    <!--Aquí comienza el selector de los huertos
-    <div id="lista-huertos">
-      <nav>
-        <a>Huertos ˅</a>  
-        <ul>
-          <li data-item="6"><a href="#grafica1" >Huerto 01</a></li>
-          <li data-item="7"><a href="#grafica2" >Huerto 02</a></li>
-          <li data-item="8"><a href="#grafica3" ></a></li>
-        </ul>
-      </nav>
-    </div>
-    <!-- Aqui se ven las lista-medidas tiempo real
-    <div id="lista-medidas">
-      <ul>
-        <li>Temperatura: </li>
-        <li>Humedad: </li>
-        <li>Luminidad: </li>
-        <li>Luz UV: </li>
-        <li>Salinidad: </li>
-        <li>pH:</li>
-      </ul>
-    </div>
-
-    <div id="graficas">
-  </section> -->
-
-  <section class="final activo huertos" id="item1">
-    <!-- Aquí comienza el div de las graficas -->
-    <div>
-      <nav id="menu-desplegable">
-        <a>Huertos ˅</a>  
-        <ul>
-          <li data-item="6"><a href="#grafica1" class="activa">Kit GTI 01</a></li>
-          <li data-item="7"><a href="#grafica2" class="">Kit GTI 02</a></li>
-          <li data-item="8"><a href="#grafica3" class="">Plantas de Lucia</a></li>
-        </ul>
-      </nav>
-    </div>
-    <div class="graficas">
-      <!--Aquí comienza la gráfica 1-->
-      <article id="grafica1" class="grafica">
-        <canvas id="plot1"></canvas>
-        <script>
-          var ctx1 = document.getElementById('plot1').getContext('2d');
-          
-          var data1 = {
-            labels: ['13:00', '14:00', '15:00', '16:00', '17:00', '18:00'],
-            datasets: [{
-              label: 'Kit GTI 01',
-              data: [25.3, 25.4, 25.6, 25.9, 26.1, 26 ],
-              backgroundColor: 'rgba(255, 99, 132, 0.5)',
-              borderColor: 'rgba(255,99,132,1)',
-              borderWidth: 1
-            }]
-          };
-          
-          var options1 = {
-            title: {
-              display: true,
-              text: 'Kit GTI 01'
-            }
-          };
-          
-          new Chart(ctx1, {
-            type: 'line',
-            data: data1,
-            options: options1
-          });
-        </script>
-      </article>
-      <!--Aquí termina la gráfica 1-->
-      <!--Aquí comienza la gráfica 2-->
-      <article id="grafica2" class="grafica">
-        <canvas id="plot2"></canvas>
-        <script>
-          var ctx2 = document.getElementById('plot2').getContext('2d');
-          
-          var data2 = {
-            labels: ['13:00', '14:00', '15:00', '16:00', '17:00', '18:00'],
-            datasets: [{
-              label: 'Kit GTI 02',
-              data: [27.4, 27.4, 27.7, 28, 28.3, 28.5],
-              backgroundColor: 'rgba(54, 162, 235, 0.5)',
-              borderColor: 'rgba(54, 162, 235, 1)',
-              borderWidth: 1
-            }]
-          };
-          
-          var options2 = {
-            title: {
-              display: true,
-              text: 'Kit GTI 02'
-            }
-          };
-          
-          new Chart(ctx2, {
-            type: 'line',
-            data: data2,
-            options: options2
-          });
-        </script>
-      </article>
-      <!--Aquí termina la gráfica 2-->
-      <!--Aquí comienza la gráfica 3-->
-      <article id="grafica3" class="grafica">
-        <canvas id="plot3"></canvas>
-        <script>
-          var ctx3 = document.getElementById('plot3').getContext('2d');
-          
-          var data3 = {
-            labels: ['13:00', '14:00', '15:00', '16:00', '17:00', '18:00'],
-            datasets: [{
-              label: 'Plantas de Lucia',
-              data: [21.9, 21.3, 21, 21, 21.1, 21.3],
-              backgroundColor: [
-              'rgba(255, 99, 132, 0.2)',
-              'rgba(54, 162, 235, 0.2)',
-              'rgba(255, 206, 86, 0.2)'
-              ],
-              borderColor: [
-              'rgba(255, 99, 132, 1)',
-              'rgba(54, 162, 235, 1)',
-              'rgba(255, 206,235,1)'],
+  <section>
+    <div class="container">
+      <!--Aquí comienza el selector de los huertos-->
+      <div class="row"> 
+        <div class="col col-lg-4 offset-lg-2" >
+          <select class="form-control" id="selector-huertos">
+            <option value="1">Huerto 1</option>
+            <option value="2">Huerto 2</option>
+            <option value="3">Huerto 3</option>
+          </select>
+        </div>
+      </div>
+        
+<!--         <nav id="lista-huertos">
+          <ul>
+            <li><a href="#grafica1" id="huerto1"></a></li>
+            <li><a href="#grafica2" id="huerto2"></a></li>
+            <li><a href="#grafica3" id="huerto3"></a></li>
+          </ul>
+        </nav> -->
+        
+      <div class="monitorizado row">
+        <div id="lista-medidas" class="col-lg-5 d-flex align-items-center" >
+          <div class="div-lista flex-fill">
+            
+            <ul class="list-group list-group-horizontal">
+              <li class="flex-fill d-flex"><button type="button" value="1" id="temperatura" onclick="cambiarGrafica(this.id)" class="list-group-item boton-texto flex-fill active">Temperatura:</button></li>
+              <li class="flex-fill d-flex"><button type="button" value="2" id="humedad" onclick="cambiarGrafica(this.id)" class="list-group-item boton-texto flex-fill">Humedad:</button></li>
+            </ul>
+            <ul class="list-group list-group-horizontal">
+              <li class="flex-fill d-flex"><button type="button" value="3" id="luminosidad" onclick="cambiarGrafica(this.id)" class="list-group-item boton-texto flex-fill">Luminosidad:</button></li>
+              <li class="flex-fill d-flex"><button type="button" value="4" id="luz_UV" onclick="cambiarGrafica(this.id)" class="list-group-item boton-texto flex-fill">Luz UV:</button></li>
+            </ul>
+            <ul class="list-group list-group-horizontal">
               
-            }],borderWidth: 1,
-          };
-          var options3 = {
-            title: {
-              display: true,
-              text: 'Plantas de lucia'
-            }
-          };
-          
-          new Chart(ctx3, {
-            type: 'line',
-            data: data3,
-            options: options3
-          });
-        </script>
-      </article>
-      <!--Aquí termina la gráfica 3-->
+              <li class="flex-fill d-flex"><button type="button" value="5" id="salinidad" onclick="cambiarGrafica(this.id)" class="list-group-item boton-texto flex-fill">Salinidad:</button></li>
+              <li class="flex-fill d-flex"><button type="button" value="6" id="pH" onclick="cambiarGrafica(this.id)" class="list-group-item boton-texto flex-fill">pH:</button></li>
+            </ul>
+            
+          </div>
+        </div>
+        <!-- Aqui se ven las lista-medidas tiempo real -->
+        
+        <!-- Aquí comienza el div de las graficas -->
+        <div class="col-lg-7" id="graficas" onload="graficaPredeterminada()">
+          <!--Aquí comienza la gráfica 1-->
+          <canvas id="plot1" class="grafica"></canvas>
+          <script src="../js/grafica.js"></script></script>
+        </div>
+      </div>
+
     </div>
   </section>
-  <!-- <footer class="pie-pagina" id="pie">
-    
-    <a href="../añadir.html">
-      <img src="/img/icono-mas.png">
-    </a>
-  </footer> -->
-  <script>
-    document.querySelector("#menu").addEventListener(
-            "click",
-            (event) => {
-              let value = event.target.parentNode.dataset.item; // Se cambia el selector a parentNode.dataset.item para seleccionar el valor del atributo data-item del elemento li
-              let tt = "item" + value;
-              let items = document.querySelectorAll("section[id^='item']");
-              items.forEach(
-                      (item)=>{
-                        if(item.id === tt){
-                          item.classList.add("activo");
-                        }else{
-                          item.classList.remove("activo");
-                        }
-                      }
-              )
-              let links = document.querySelectorAll("#menu a");
-              links.forEach((link) => {
-                if (link.parentNode.dataset.item === value) {
-                  link.classList.add("activa");
-                } else {
-                  link.classList.remove("activa");
-                }
-              });
-            }
-  
-  
-  
-    );
-  </script>
-  <script>
-    document.querySelector("#menu-huertos").addEventListener(
-            "click",
-            (event) => {
-              let value = event.target.parentNode.dataset.item; // Se cambia el selector a parentNode.dataset.item para seleccionar el valor del atributo data-item del elemento li
-              let tt = "item" + value;
-              let items = document.querySelectorAll("div[id^='item']");
-              items.forEach(
-                      (item)=>{
-                        if(item.id === tt){
-                          item.classList.add("activo");
-                        }else{
-                          item.classList.remove("activo");
-                        }
-                      }
-              )
-              let links = document.querySelectorAll("#menu-huertos a");
-              links.forEach((link) => {
-                if (link.parentNode.dataset.item === value) {
-                  link.classList.add("activa");
-                } else {
-                  link.classList.remove("activa");
-                }
-              });
-            }
-  
-    );
-  </script>
-  <script>
-    document.querySelectorAll('article:not(:first-of-type)').forEach(function(el) {
-      el.style.display = 'none';
-    });
-  
-    document.querySelectorAll('nav a').forEach(function(el) {
-      el.addEventListener('click', function(event) {
-  
-        document.querySelectorAll('article').forEach(function(el) {
-          el.style.display = 'none';
-        });
-  
-        var href = this.getAttribute('href');
-        document.querySelector(href).style.display = 'block';
-      });
-    });
-  </script>
 
+
+  
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+  <script src="../js/monitorizar.js"></script>
   <script src="../js/cabecera.js"></script>
 </body>
 </html>

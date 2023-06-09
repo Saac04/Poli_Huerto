@@ -1,5 +1,5 @@
-.titulo{
-    margin-bottom: 50px;
+h1{
+    color: black;
   }
   a{
     text-decoration: none;
@@ -28,11 +28,10 @@
     border: none;
     border-bottom: 2px solid #00CFA4;
     border-radius: 0;
-    padding: 0px;
+    padding: 0;
     font-weight: bold;
     display: inline-block;
     width: 100%;
-    margin-bottom: 70px; /* Separación entre campos de texto */
   }
 
   .form-control:focus {
@@ -43,9 +42,4 @@
   .btn-custom {
     font-size: 18px;
     padding: 0.375rem 0.75rem;
-    width: 100%;
-  }
-
-  .title {
-    margin-bottom: 40px; /* Espacio entre título y campos de texto */
   }

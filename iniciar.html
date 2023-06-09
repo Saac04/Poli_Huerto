@@ -1,52 +1,54 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Iniciar Sesión</title>
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/cabecera.css">
+  <meta charset="UTF-8">
+  <title>Contactanos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/iniciar.css">
-  <link rel="stylesheet" href="css/body.css">
-  <link rel="script" href="js/iniciar-sesion.js">
-
+  <link rel="stylesheet" href="css/cabecera.css">
 </head>
 <body>
-<div class="contenedor">
-  <header id="cabecera-web" role="banner">
-    <!--logo-->
-    <a href="index.html">
-      <img src="img/logo-gti.png" alt="logo GTI" id="logo-GTI">
-    </a>
-    <h1>Cuidamos tus plantas</h1>
 
-    <img src="img/icono-cuenta1.png" alt="mi cuenta" id="mi-cuenta">
+  <header>
+    <nav class="cabecera navbar navbar-expand-md navbar-light" id="cabecera-web" role="banner">
+  
+        <!-- Aqui esta el logotipo de la empresa -->
+        <a class="logo navbar-brand mr-auto" href="../index.html">
+            <img src="/img/logo-gti.png" alt="logo GTI" id="logo-GTI">
+        </a>
 
-    <!--menú-->
+        <a href="iniciar.html"> Iniciar Sesión </a>
 
+    </nav>
+</header>
 
-  </header>
-  <div class="formulario">
-    <h1>Inicio de sesión</h1>
-    <form method="post">
-           <div class="usuario">
-             <input type="text" id="user" placeholder="Nombre de Usuario*" required>
-             <!--<label for="user">Nombre de usuario</label>-->
-           </div>
-           <div class="contrasenya">
-             <input type="password" id="password" placeholder="Contraseña*" required>
-             <!--<label for="password">Contraseña</label>-->
-           </div>
-      <a href="usuarios/monitorizar.html">
-        <input type="submit" value="Iniciar Sesión" href="../usuarios/monitorizar.html">
-      </a>
-      <div class="registrarse">
-        (*)Escriba su usuario y su contraseña
+<div class="container">
+
+  <div class="d-flex justify-content-center align-items-center">
+    <div class="card p-4">
+      <div class="titulo">
+        <h2 class="text-center mb-4 title">Iniciar sesión</h2>
       </div>
-    </form>
+      <form method="post">
+        <div class="mb-3">
+          <input type="text" class="form-control" id="user" placeholder="Nombre de usuario *" required>
+        </div>
+        <div class="mb-3">
+          <input type="text" class="form-control" id="password" placeholder="Contraseña *" required>
+        </div>
+        <div class="text-center">
+          <div class="mb-3">
+            <input type="submit" value="Contactar" class="btn btn-primary btn-custom btn-auto" style="background-color: #00CFA4; border: none;">
+          </div>
+        </div>
+        <div class="text-center">
+          (*) Escriba su usuario y su contraseña
+        </div>
+      </form>
+    </div>
   </div>
 </div>
-
 </body>
 </html>
